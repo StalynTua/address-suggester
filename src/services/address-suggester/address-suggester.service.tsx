@@ -9,7 +9,7 @@ export default class AddressSuggesterService {
             .get(
                 `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
                     address || ''
-                )}&key=AIzaSyDZSfPspkndSN419jqUy5NB3Z-hTW9ulR0`
+                )}&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY || ''}`
             )
     }
 };

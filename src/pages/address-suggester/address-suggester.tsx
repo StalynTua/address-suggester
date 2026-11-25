@@ -95,7 +95,7 @@ const AddressInput = () => {
                     <h3>So we know where to drop off stuff</h3>
                     <h4>We won´t share your address with your ex(or whoever)</h4>
                 </ContainerTitles>
-                <AutocompleteAddress apiKey='AIzaSyDZSfPspkndSN419jqUy5NB3Z-hTW9ulR0'
+                <AutocompleteAddress apiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY || ''}
                                      handleAddress={handlePlaceSelect}/>
 
             </Background>
